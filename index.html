@@ -147,6 +147,19 @@
   .timeline-content p{color:var(--muted);font-size:13px;line-height:1.5}
 
   /* CONTACT */
+  /* FAQ */
+  .faq-section{padding:100px 80px}
+  .faq-inner{max-width:900px;margin:0 auto;text-align:center}
+  .faq-inner .section-desc{margin-left:auto;margin-right:auto}
+  .faq-grid{display:flex;flex-direction:column;gap:12px;text-align:left;margin-top:40px}
+  .faq-item{background:var(--card-bg);border:1px solid rgba(45,184,75,.1);border-radius:14px;padding:15px 20px;transition:border-color .25s}
+  .faq-item[open]{border-color:rgba(45,184,75,.3)}
+  .faq-item summary{font-weight:600;font-size:15px;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:'+';font-size:22px;color:var(--green);transition:transform .2s}
+  .faq-item[open] summary::after{transform:rotate(45deg)}
+  .faq-item p{color:var(--muted);font-size:14px;line-height:1.6;padding-top:12px;margin-top:12px;border-top:1px solid rgba(45,184,75,.08)}
+
   .contact-section{background:var(--dark);border-top:1px solid rgba(45,184,75,.08);padding:100px 80px}
   .contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
   .contact-detail{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px}
@@ -172,13 +185,31 @@
   .footer-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s}
   .footer-links a:hover{color:var(--green)}
 
+  /* BACK TO TOP */
+  .back-to-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:var(--green);color:var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:101;border:none;box-shadow:0 4px 14px rgba(45,184,75,.4)}
+  .back-to-top:hover{background:var(--white);transform:translateY(-5px)}
+
+  /* MOBILE NAV TOGGLE */
+  .mobile-nav-toggle{display:none;background:transparent;border:none;cursor:pointer;padding:10px;z-index:101}
+  .hamburger-icon{display:block;position:relative;width:24px;height:2px;background:var(--white);transition:all .2s}
+  .hamburger-icon::before,.hamburger-icon::after{content:'';position:absolute;left:0;width:100%;height:2px;background:var(--white);transition:all .2s}
+  .hamburger-icon::before{top:-7px}
+  .hamburger-icon::after{bottom:-7px}
+  body.mobile-nav-open .hamburger-icon{background:transparent}
+  body.mobile-nav-open .hamburger-icon::before{transform:rotate(45deg);top:0}
+  body.mobile-nav-open .hamburger-icon::after{transform:rotate(-45deg);bottom:0}
+  body.mobile-nav-open{overflow:hidden}
+
   /* RESPONSIVE */
   @media(max-width:900px){
     nav{padding:14px 24px}
-    .nav-links{display:none}
+    .nav-links{position:fixed;inset:0;background:var(--dark);flex-direction:column;align-items:center;justify-content:center;gap:40px;transform:translateX(100%);transition:transform .4s ease-in-out;z-index:100;padding-top:80px;display:flex}
+    .nav-links.active{transform:translateX(0)}
+    .nav-links a{font-size:20px;color:var(--white)}
+    .nav-links .nav-cta{font-size:18px!important}
+    .mobile-nav-toggle{display:block}
     .hero{grid-template-columns:1fr;padding:100px 24px 60px;gap:40px}
-    .hero-visual{display:none}
-    .about,.courses-section,.structure-section,.contact-section{padding:70px 24px}
+    .hero-visual{display:none} .about,.courses-section,.structure-section,.faq-section,.contact-section{padding:70px 24px}
     .about-inner,.structure-inner,.contact-inner{grid-template-columns:1fr;gap:40px}
     footer{flex-direction:column;gap:20px;padding:28px 24px;text-align:center}
     .footer-links{flex-wrap:wrap;justify-content:center}
@@ -209,12 +240,15 @@
     </svg>
     <span class="nav-logo-text">SSB <span>ICT</span></span>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links-list">
     <li><a href="#about">About</a></li>
     <li><a href="#courses">Courses</a></li>
     <li><a href="#structure">How It Works</a></li>
     <li><a href="#enroll" class="nav-cta">Enroll Now</a></li>
   </ul>
+  <button class="mobile-nav-toggle" aria-controls="nav-links-list" aria-expanded="false">
+    <span class="hamburger-icon"></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -226,7 +260,7 @@
     <h1>Master <span class="accent">Digital Skills</span><br>That <span class="accent2">Pay.</span></h1>
     <p class="hero-sub">Professional tech training for young learners and adults in Nigeria. From web development to digital marketing — live, online, with real mentors.</p>
     <div class="hero-counters">
-      <div class="hero-count"><div class="big">8+</div><div class="small">Courses</div></div>
+      <div class="hero-count"><div class="big counter" data-count="8">8+</div><div class="small">Courses</div></div>
       <div class="hero-count"><div class="big">Live</div><div class="small">Classes</div></div>
       <div class="hero-count"><div class="big">Cert.</div><div class="small">Included</div></div>
       <div class="hero-count"><div class="big">NG</div><div class="small">Based</div></div>
@@ -545,6 +579,37 @@
 
 <div class="section-divider"></div>
 
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="fade-in">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title">Frequently Asked<br>Questions</h2>
+      <p class="section-desc">Here are some of the most common questions we get. If you have others, please don't hesitate to reach out.</p>
+    </div>
+    <div class="faq-grid fade-in">
+      <details class="faq-item">
+        <summary>What if I have no experience?</summary>
+        <p>No problem at all! Our courses are designed for absolute beginners. We'll guide you from the very first step, assuming no prior knowledge.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are the classes live or pre-recorded?</summary>
+        <p>All our classes are conducted live online. This allows you to interact directly with the instructor, ask questions, and get real-time feedback, just like in a physical classroom.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I get a certificate after completion?</summary>
+        <p>Yes, upon successful completion of any course, you will receive an official Certificate of Completion from SSB ICT Solutions to showcase your new skills to potential employers or clients.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What do I need to get started?</summary>
+        <p>You'll need a computer (laptop or desktop), a reliable internet connection, and the willingness to learn. We will provide guidance on any specific software needed for your course.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
 <!-- CONTACT -->
 <section class="contact-section" id="enroll">
   <div class="contact-inner">
@@ -559,7 +624,7 @@
     </div>
     <div class="fade-in">
       <p style="color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:20px;">Send an Enquiry</p>
-      <form id="contactForm" action="https://formsubmit.co/sholy.sam007@gmail.com" method="POST" class="contact-form">
+      <form id="contactForm" class="contact-form">
         <div class="form-row">
           <div class="form-group"><label>Your Name</label><input id="name" name="name" type="text" placeholder="Full name"></div>
           <div class="form-group"><label>Email</label><input id="email" name="email" type="email" placeholder="your@email.com"></div>
@@ -590,6 +655,9 @@
   </div>
 </section>
 
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
+
 <!-- FOOTER -->
 <footer>
   <div style="display:flex;align-items:center;gap:12px">
@@ -612,6 +680,7 @@
     <a href="#about">About</a>
     <a href="#courses">Courses</a>
     <a href="#structure">How It Works</a>
+    <a href="#faq">FAQ</a>
     <a href="#enroll">Enroll</a>
   </div>
 </footer>
@@ -640,6 +709,35 @@
     });
   });
 
+  // Animate hero counters
+  const animateValue = (obj, start, end, duration, suffix = '') => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start) + suffix;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  };
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll('.counter');
+        counters.forEach(counter => {
+          const target = +counter.dataset.count;
+          const suffix = counter.innerHTML.includes('+') ? '+' : '';
+          animateValue(counter, 0, target, 1500, suffix);
+        });
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.7 });
+  const heroCountersEl = document.querySelector('.hero-counters');
+  if (heroCountersEl) { counterObserver.observe(heroCountersEl); }
+
   // Hero ticker
   const courses = [
     { icon:'🖥️', name:'Frontend Development',     dur:'12 Weeks', cat:'dev'       },
@@ -662,6 +760,69 @@
     </div>`;
   });
 
+  // Mobile Nav Toggle
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('mobile-nav-open');
+    navLinks.classList.toggle('active');
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+  });
+  // Close mobile nav when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (document.body.classList.contains('mobile-nav-open')) {
+        document.body.classList.remove('mobile-nav-open');
+        navLinks.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Handle Contact Form submission to WhatsApp
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    const country = document.getElementById('country').value.trim();
+    const course = document.getElementById('course').value;
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email) {
+        alert('Please provide your name and email.');
+        return;
+    }
+
+    // WhatsApp number from the contact details
+    const phoneNumber = '2347034937176';
+
+    let text = `Hello SSB ICT Solutions, I have an enquiry from your website:\n\n` +
+               `*Name:* ${name}\n` +
+               `*Email:* ${email}\n`;
+
+    if (whatsapp) text += `*WhatsApp:* ${whatsapp}\n`;
+    if (country) text += `*Country:* ${country}\n`;
+    if (course) text += `*Course of Interest:* ${course}\n`;
+    if (message) text += `*Message:* ${message}\n`;
+
+    const encodedText = encodeURIComponent(text);
+    const url = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+    window.location.href = url;
+  });
+
+  // Back to Top
+  const backToTopBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      backToTopBtn.classList.add('active');
+    } else {
+      backToTopBtn.classList.remove('active');
+    }
+  });
+  backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 </body>
 </html>
