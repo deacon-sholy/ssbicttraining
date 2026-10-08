@@ -291,10 +291,10 @@
       <p style="color:var(--muted);font-size:14px;">Lead Instructor: <strong style="color:var(--white)">Samuel Shola</strong> — SSB ICT Solutions, Nigeria</p>
     </div>
     <div class="about-highlights fade-in">
-      <div class="highlight-item"><div class="highlight-icon">🎯</div><div class="highlight-text"><h4>Beginner Friendly</h4><p>We guide you step-by-step from the ground up — no prior tech knowledge required.</p></div></div>
-      <div class="highlight-item"><div class="highlight-icon">💻</div><div class="highlight-text"><h4>Live Online Classes</h4><p>Real-time sessions with your instructor. Ask questions and get instant answers.</p></div></div>
-      <div class="highlight-item"><div class="highlight-icon">🚀</div><div class="highlight-text"><h4>Real Projects & Portfolio</h4><p>Every course ends with a tangible project you can show employers or clients.</p></div></div>
-      <div class="highlight-item"><div class="highlight-icon">🎓</div><div class="highlight-text"><h4>Certificate of Completion</h4><p>Every graduate receives an official SSB ICT Solutions certificate.</p></div></div>
+      <div class="highlight-item"><div class="highlight-icon"></div><div class="highlight-text"><h4>Beginner Friendly</h4><p>We guide you step-by-step from the ground up — no prior tech knowledge required.</p></div></div>
+      <div class="highlight-item"><div class="highlight-icon"></div><div class="highlight-text"><h4>Live Online Classes</h4><p>Real-time sessions with your instructor. Ask questions and get instant answers.</p></div></div>
+      <div class="highlight-item"><div class="highlight-icon"></div><div class="highlight-text"><h4>Real Projects & Portfolio</h4><p>Every course ends with a tangible project you can show employers or clients.</p></div></div>
+      <div class="highlight-item"><div class="highlight-icon"></div><div class="highlight-text"><h4>Certificate of Completion</h4><p>Every graduate receives an official SSB ICT Solutions certificate.</p></div></div>
     </div>
   </div>
 </section>
@@ -322,7 +322,7 @@
     <!-- 1 Frontend -->
     <div class="course-card fade-in" data-cat="dev">
       <div class="course-card-top">
-        <span class="course-icon">🖥️</span>
+        <span class="course-icon"></span>
         <span class="course-cat-badge cat-dev">Development</span>
         <h3>Frontend Development</h3>
         <p>Build modern, responsive websites from scratch using HTML, CSS and JavaScript. Design interfaces that look great on any device.</p>
@@ -335,9 +335,9 @@
           <div class="course-topic">Responsive Design &amp; Final Project</div>
         </div>
         <div class="course-meta">
-          <div class="meta-item">⏱ <span>12 Weeks</span></div>
-          <div class="meta-item">📅 <span>2× / Week</span></div>
-          <div class="meta-item">🎓 <span>Certificate</span></div>
+          <div class="meta-item"><span>12 Weeks</span></div>
+          <div class="meta-item"><span>2× / Week</span></div>
+          <div class="meta-item"><span>Certificate</span></div>
         </div>
       </div>
       <div class="course-card-footer">
@@ -349,7 +349,7 @@
     <!-- 2 Backend PHP -->
     <div class="course-card fade-in" data-cat="dev">
       <div class="course-card-top">
-        <span class="course-icon">⚙️</span>
+        <span class="course-icon"></span>
         <span class="course-cat-badge cat-dev">Development</span>
         <h3>Backend Development (PHP)</h3>
         <p>Learn server-side programming with PHP and MySQL. Build databases, login systems and fully dynamic web applications.</p>
@@ -362,9 +362,9 @@
           <div class="course-topic">Build a Full Dynamic Web App</div>
         </div>
         <div class="course-meta">
-          <div class="meta-item">⏱ <span>12 Weeks</span></div>
-          <div class="meta-item">📅 <span>2× / Week</span></div>
-          <div class="meta-item">🎓 <span>Certificate</span></div>
+          <div class="meta-item"><span>12 Weeks</span></div>
+          <div class="meta-item"><span>2× / Week</span></div>
+          <div class="meta-item"><span>Certificate</span></div>
         </div>
       </div>
       <div class="course-card-footer">
@@ -376,7 +376,7 @@
     <!-- 3 Graphic Design -->
     <div class="course-card fade-in" data-cat="design">
       <div class="course-card-top">
-        <span class="course-icon">🎨</span>
+        <span class="course-icon"></span>
         <span class="course-cat-badge cat-design">Design</span>
         <h3>Graphic Design</h3>
         <p>Create stunning visuals for brands, social media and print. Master industry tools and design principles used by professionals worldwide.</p>
@@ -389,9 +389,9 @@
           <div class="course-topic">Portfolio of 5 Real Client Projects</div>
         </div>
         <div class="course-meta">
-          <div class="meta-item">⏱ <span>10 Weeks</span></div>
-          <div class="meta-item">📅 <span>2× / Week</span></div>
-          <div class="meta-item">🎓 <span>Certificate</span></div>
+          <div class="meta-item"><span>10 Weeks</span></div>
+          <div class="meta-item"><span>2× / Week</span></div>
+          <div class="meta-item"><span>Certificate</span></div>
         </div>
       </div>
       <div class="course-card-footer">
@@ -403,7 +403,7 @@
     <!-- 4 UI/UX -->
     <div class="course-card fade-in" data-cat="design">
       <div class="course-card-top">
-        <span class="course-icon">✏️</span>
+        <span class="course-icon"></span>
         <span class="course-cat-badge cat-design">Design</span>
         <h3>UI / UX Design</h3>
         <p>Design beautiful, intuitive user interfaces using Figma. Learn real design workflows used by product teams at top companies.</p>
@@ -416,9 +416,9 @@
           <div class="course-topic">Present a Complete App Design</div>
         </div>
         <div class="course-meta">
-          <div class="meta-item">⏱ <span>10 Weeks</span></div>
-          <div class="meta-item">📅 <span>2× / Week</span></div>
-          <div class="meta-item">🎓 <span>Certificate</span></div>
+          <div class="meta-item"><span>10 Weeks</span></div>
+          <div class="meta-item"><span>2× / Week</span></div>
+          <div class="meta-item"><span>Certificate</span></div>
         </div>
       </div>
       <div class="course-card-footer">
@@ -430,7 +430,7 @@
     <!-- 5 Digital Marketing -->
     <div class="course-card fade-in" data-cat="marketing">
       <div class="course-card-top">
-        <span class="course-icon">📈</span>
+        <span class="course-icon"></span>
         <span class="course-cat-badge cat-marketing">Marketing</span>
         <h3>Digital Marketing</h3>
         <p>Learn to promote businesses online. Run paid campaigns, grow audiences and generate consistent sales using proven digital strategies.</p>
@@ -443,9 +443,9 @@
           <div class="course-topic">Analytics, Reporting &amp; ROI</div>
         </div>
         <div class="course-meta">
-          <div class="meta-item">⏱ <span>8 Weeks</span></div>
-          <div class="meta-item">📅 <span>2× / Week</span></div>
-          <div class="meta-item">🎓 <span>Certificate</span></div>
+          <div class="meta-item"><span>8 Weeks</span></div>
+          <div class="meta-item"><span>2× / Week</span></div>
+          <div class="meta-item"><span>Certificate</span></div>
         </div>
       </div>
       <div class="course-card-footer">
@@ -457,7 +457,7 @@
     <!-- 6 Social Media -->
     <div class="course-card fade-in" data-cat="social">
       <div class="course-card-top">
-        <span class="course-icon">📱</span>
+        <span class="course-icon"></span>
         <span class="course-cat-badge cat-social">Social Media</span>
         <h3>Social Media Management</h3>
         <p>Manage and grow social media pages for businesses. Create content strategies that build real, engaged and paying audiences.</p>
@@ -470,9 +470,9 @@
           <div class="course-topic">Analytics, Growth &amp; Reporting</div>
         </div>
         <div class="course-meta">
-          <div class="meta-item">⏱ <span>8 Weeks</span></div>
-          <div class="meta-item">📅 <span>2× / Week</span></div>
-          <div class="meta-item">🎓 <span>Certificate</span></div>
+          <div class="meta-item"><span>8 Weeks</span></div>
+          <div class="meta-item"><span>2× / Week</span></div>
+          <div class="meta-item"><span>Certificate</span></div>
         </div>
       </div>
       <div class="course-card-footer">
@@ -484,7 +484,7 @@
     <!-- 7 SEO -->
     <div class="course-card fade-in" data-cat="seo">
       <div class="course-card-top">
-        <span class="course-icon">🔍</span>
+        <span class="course-icon"></span>
         <span class="course-cat-badge cat-seo">SEO</span>
         <h3>Search Engine Optimisation</h3>
         <p>Get websites ranking on Google. Learn keyword research, technical SEO, link building and content strategies that drive organic traffic.</p>
@@ -497,9 +497,9 @@
           <div class="course-topic">Google Search Console &amp; Analytics</div>
         </div>
         <div class="course-meta">
-          <div class="meta-item">⏱ <span>8 Weeks</span></div>
-          <div class="meta-item">📅 <span>2× / Week</span></div>
-          <div class="meta-item">🎓 <span>Certificate</span></div>
+          <div class="meta-item"><span>8 Weeks</span></div>
+          <div class="meta-item"><span>2× / Week</span></div>
+          <div class="meta-item"><span>Certificate</span></div>
         </div>
       </div>
       <div class="course-card-footer">
@@ -511,7 +511,7 @@
     <!-- 8 Content Creation -->
     <div class="course-card fade-in" data-cat="social">
       <div class="course-card-top">
-        <span class="course-icon">🎬</span>
+        <span class="course-icon"></span>
         <span class="course-cat-badge cat-social">Social Media</span>
         <h3>Content Creation &amp; Video</h3>
         <p>Create scroll-stopping video content for YouTube, TikTok and Instagram. Master filming, editing, storytelling and monetisation.</p>
@@ -524,9 +524,9 @@
           <div class="course-topic">Monetisation &amp; Brand Partnerships</div>
         </div>
         <div class="course-meta">
-          <div class="meta-item">⏱ <span>8 Weeks</span></div>
-          <div class="meta-item">📅 <span>2× / Week</span></div>
-          <div class="meta-item">🎓 <span>Certificate</span></div>
+          <div class="meta-item"><span>8 Weeks</span></div>
+          <div class="meta-item"><span>2× / Week</span></div>
+          <div class="meta-item"><span>Certificate</span></div>
         </div>
       </div>
       <div class="course-card-footer">
@@ -724,10 +724,10 @@
       <span class="section-label">Get in Touch</span>
       <h2 class="section-title">Ready to<br>Start?</h2>
       <p style="color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:38px;">Reach out and we'll walk you through the best course or service for your goals, schedule and enrollment — no obligation.</p>
-      <div class="contact-detail"><div class="contact-icon">👨‍💻</div><div class="contact-text"><label>Instructor</label><span>Samuel Shola</span></div></div>
-      <div class="contact-detail"><div class="contact-icon">🏢</div><div class="contact-text"><label>Organisation</label><span>SSB ICT Solutions, Nigeria</span></div></div>
-      <div class="contact-detail"><div class="contact-icon">✉️</div><div class="contact-text"><label>Email</label><span><a href="mailto:sholy.sam007@gmail.com">sholy.sam007@gmail.com</a></span></div></div>
-      <div class="contact-detail"><div class="contact-icon">📱</div><div class="contact-text"><label>WhatsApp</label><span><a href="tel:+2347034937176">+2347034937176</a></span></div></div>
+      <div class="contact-detail"><div class="contact-icon"></div><div class="contact-text"><label>Instructor</label><span>Samuel Shola</span></div></div>
+      <div class="contact-detail"><div class="contact-icon"></div><div class="contact-text"><label>Organisation</label><span>SSB ICT Solutions, Nigeria</span></div></div>
+      <div class="contact-detail"><div class="contact-icon"></div><div class="contact-text"><label>Email</label><span><a href="mailto:sholy.sam007@gmail.com">sholy.sam007@gmail.com</a></span></div></div>
+      <div class="contact-detail"><div class="contact-icon"></div><div class="contact-text"><label>WhatsApp</label><span><a href="tel:+2347034937176">+2347034937176</a></span></div></div>
     </div>
     <div class="fade-in">
       <p style="color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:20px;">Send an Enquiry</p>
@@ -851,14 +851,14 @@
 
   // Hero ticker
   const courses = [
-    { icon:'🖥️', name:'Frontend Development',     dur:'12 Weeks', cat:'dev'       },
-    { icon:'⚙️', name:'Backend Dev (PHP)',          dur:'12 Weeks', cat:'dev'       },
-    { icon:'🎨', name:'Graphic Design',             dur:'10 Weeks', cat:'design'    },
-    { icon:'✏️', name:'UI / UX Design',             dur:'10 Weeks', cat:'design'    },
-    { icon:'📈', name:'Digital Marketing',          dur:'8 Weeks',  cat:'marketing' },
-    { icon:'📱', name:'Social Media Management',    dur:'8 Weeks',  cat:'social'    },
-    { icon:'🔍', name:'SEO',                        dur:'8 Weeks',  cat:'seo'       },
-    { icon:'🎬', name:'Content Creation & Video',   dur:'8 Weeks',  cat:'social'    },
+    { icon:'', name:'Frontend Development',     dur:'12 Weeks', cat:'dev'       },
+    { icon:'', name:'Backend Dev (PHP)',          dur:'12 Weeks', cat:'dev'       },
+    { icon:'', name:'Graphic Design',             dur:'10 Weeks', cat:'design'    },
+    { icon:'', name:'UI / UX Design',             dur:'10 Weeks', cat:'design'    },
+    { icon:'', name:'Digital Marketing',          dur:'8 Weeks',  cat:'marketing' },
+    { icon:'', name:'Social Media Management',    dur:'8 Weeks',  cat:'social'    },
+    { icon:'', name:'SEO',                        dur:'8 Weeks',  cat:'seo'       },
+    { icon:'', name:'Content Creation & Video',   dur:'8 Weeks',  cat:'social'    },
     { icon:'AI', name:'AI Prompt Engineering', dur:'6 Weeks', cat:'ai' },
     { icon:'BOT', name:'AI Automation', dur:'8 Weeks', cat:'ai' },
     { icon:'DATA', name:'Data Analysis & Reporting', dur:'8 Weeks', cat:'ai' },

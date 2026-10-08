@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2-Day Vibe Coding Training — Early Bird ₦10,000 | SSB ICT</title>
+<meta name="description" content="Join the 2-Day Vibe Coding Training and learn to build websites, web apps and portfolio projects with AI. Early Bird ₦10,000 — closing soon. 100% online." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="2-Day Vibe Coding Training — Early Bird ₦10,000" />
+<meta property="og:description" content="Learn to build with AI in 2 days. Websites, web apps, GitHub, deployment and a real portfolio project. 100% online." />
+<meta property="og:type" content="website" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2db84b;
+    --green-dark: #1a8f35;
+    --green-light: #3ed460;
+    --orange: #f07b20;
+    --orange-light: #ffaa55;
+    --red: #ef4444;
+    --black: #0a0e0b;
+    --dark: #111811;
+    --dark2: #182018;
+    --white: #f0f7f1;
+    --muted: #7a9b7d;
+    --card-bg: rgba(30,42,31,0.85);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Space Grotesk',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.5}
+  a{color:inherit}
+
+  /* NAV */
+  nav{position:fixed;top:0;width:100%;z-index:100;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,14,11,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(45,184,75,.12)}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav-logo-text{font-family:'Outfit',sans-serif;font-weight:800;font-size:20px;color:var(--white);letter-spacing:-.5px}
+  .nav-logo-text span{color:var(--green)}
+  .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+  .nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--green)}
+  .nav-cta{background:var(--green);color:var(--black)!important;padding:10px 22px;border-radius:100px;font-weight:700!important;font-size:14px!important;transition:all .2s!important}
+  .nav-cta:hover{background:var(--green-light)!important;transform:translateY(-1px)}
+  .mobile-nav-toggle{display:none;background:transparent;border:none;cursor:pointer;padding:10px;z-index:101}
+  .hamburger-icon{display:block;position:relative;width:24px;height:2px;background:var(--white);transition:all .2s}
+  .hamburger-icon::before,.hamburger-icon::after{content:'';position:absolute;left:0;width:100%;height:2px;background:var(--white);transition:all .2s}
+  .hamburger-icon::before{top:-7px}
+  .hamburger-icon::after{bottom:-7px}
+  body.mobile-nav-open .hamburger-icon{background:transparent}
+  body.mobile-nav-open .hamburger-icon::before{transform:rotate(45deg);top:0}
+  body.mobile-nav-open .hamburger-icon::after{transform:rotate(-45deg);bottom:0}
+  body.mobile-nav-open{overflow:hidden}
+
+  /* URGENCY STRIP */
+  .alert-strip{position:relative;margin-top:73px;background:linear-gradient(90deg,var(--orange),#ff9d4d,var(--orange));color:#1a0d02;text-align:center;padding:11px 20px;font-weight:700;font-size:14px;letter-spacing:.02em;overflow:hidden}
+  .alert-strip span{display:inline-block;animation:blinkGlow 2.4s ease-in-out infinite}
+  @keyframes blinkGlow{0%,100%{opacity:1}50%{opacity:.65}}
+
+  /* HERO */
+  .hero{position:relative;padding:70px 80px 80px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 75% 30%,rgba(240,123,32,.14) 0%,transparent 70%),radial-gradient(ellipse 45% 50% at 15% 80%,rgba(45,184,75,.1) 0%,transparent 65%)}
+  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(45,184,75,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(45,184,75,.045) 1px,transparent 1px);background-size:60px 60px}
+  .hero-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(240,123,32,.12);border:1px solid rgba(240,123,32,.4);padding:7px 16px;border-radius:100px;font-size:13px;color:var(--orange-light);font-weight:600;margin-bottom:24px;animation:fadeUp .6s ease both}
+  .hero-badge::before{content:'';width:7px;height:7px;background:var(--orange);border-radius:50%;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+  .hero h1{font-family:'Outfit',sans-serif;font-size:clamp(38px,5vw,62px);font-weight:900;line-height:1.03;letter-spacing:-2px;margin-bottom:20px;animation:fadeUp .6s .1s ease both}
+  .hero h1 .accent{color:var(--green)}
+  .hero h1 .accent2{color:var(--orange)}
+  .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;max-width:520px;margin-bottom:26px;animation:fadeUp .6s .2s ease both}
+  .hero-sub strong{color:var(--white)}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .6s .3s ease both}
+  .btn-primary{background:var(--green);color:var(--black);padding:15px 34px;border-radius:100px;font-weight:700;font-size:15px;text-decoration:none;transition:all .25s;display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif}
+  .btn-primary:hover{background:var(--green-light);transform:translateY(-2px);box-shadow:0 12px 32px rgba(45,184,75,.3)}
+  .btn-wa{background:transparent;color:var(--white);padding:15px 34px;border-radius:100px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid rgba(255,255,255,.18);transition:all .25s;display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-family:'Space Grotesk',sans-serif}
+  .btn-wa:hover{border-color:var(--green);color:var(--green)}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+  /* PRICE CARD */
+  .price-card{background:var(--card-bg);border:1px solid rgba(240,123,32,.28);border-radius:24px;padding:32px 30px;backdrop-filter:blur(14px);box-shadow:0 30px 70px rgba(0,0,0,.55);animation:fadeUp .7s .25s ease both;position:relative;overflow:hidden}
+  .price-card::before{content:'EARLY BIRD';position:absolute;top:16px;right:-38px;background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.14em;padding:5px 44px;transform:rotate(38deg)}
+  .price-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+  .price-now{font-family:'Outfit',sans-serif;font-size:56px;font-weight:900;line-height:1;letter-spacing:-2px;color:var(--white)}
+  .price-was{display:flex;align-items:baseline;gap:10px;margin-top:12px;color:var(--muted);font-size:17px}
+  .price-was s{color:#94a896;text-decoration-color:var(--red);text-decoration-thickness:2px}
+  .price-save{display:inline-block;margin-top:14px;background:rgba(45,184,75,.12);border:1px solid rgba(45,184,75,.3);color:var(--green);font-size:12px;font-weight:700;padding:5px 12px;border-radius:100px}
+  .price-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(240,123,32,.35),transparent);margin:22px 0}
+  .price-facts{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:24px}
+  .price-facts li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white)}
+  .price-facts li::before{content:'✓';width:20px;height:20px;border-radius:50%;background:rgba(45,184,75,.15);color:var(--green);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .price-warn{background:rgba(239,68,68,.1);border:1px dashed rgba(239,68,68,.45);color:#fca5a5;font-size:13px;line-height:1.55;padding:12px 14px;border-radius:12px;margin-bottom:20px}
+  .price-card .btn-primary{width:100%;justify-content:center}
+
+  /* SHARED */
+  .section-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+  .section-title{font-family:'Outfit',sans-serif;font-size:clamp(28px,3.4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+  .section-desc{color:var(--muted);font-size:16px;line-height:1.7;max-width:600px}
+  .section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(45,184,75,.2),transparent);margin:0 80px}
+  .section-head{text-align:center;max-width:720px;margin:0 auto 50px}
+  .section-head .section-desc{margin:0 auto}
+  .fade-in{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+  .fade-in.visible{opacity:1;transform:none}
+
+  /* PROBLEM */
+  .problem{background:var(--dark);border-top:1px solid rgba(45,184,75,.08);border-bottom:1px solid rgba(45,184,75,.08);padding:90px 80px}
+  .problem-inner{max-width:1000px;margin:0 auto;text-align:center}
+  .problem h2{font-family:'Outfit',sans-serif;font-size:clamp(26px,3.2vw,40px);font-weight:800;letter-spacing:-1.2px;line-height:1.2;margin-bottom:18px}
+  .problem h2 .strike{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--orange);text-decoration-thickness:3px}
+  .problem p{color:var(--muted);font-size:16.5px;line-height:1.75;max-width:640px;margin:0 auto 14px}
+  .problem p strong{color:var(--white)}
+
+  /* LEARN GRID */
+  .learn{padding:90px 80px}
+  .learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;max-width:1100px;margin:0 auto}
+  .learn-card{background:var(--card-bg);border:1px solid rgba(45,184,75,.1);border-radius:18px;padding:26px 24px;transition:all .3s;position:relative}
+  .learn-card:hover{border-color:rgba(240,123,32,.4);transform:translateY(-5px);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+  .learn-card .ico{font-size:30px;display:block;margin-bottom:14px}
+  .learn-card h3{font-family:'Outfit',sans-serif;font-size:19px;font-weight:700;margin-bottom:7px;letter-spacing:-.3px}
+  .learn-card p{color:var(--muted);font-size:14px;line-height:1.65}
+
+  /* FACTS STRIP */
+  .facts{background:var(--dark);border-top:1px solid rgba(45,184,75,.08);border-bottom:1px solid rgba(45,184,75,.08);padding:52px 80px}
+  .facts-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .fact .big{font-family:'Outfit',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:900;color:var(--green);line-height:1}
+  .fact .big.orange{color:var(--orange)}
+  .fact .small{font-size:11.5px;color:var(--muted);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+
+  /* APPLY */
+  .apply{padding:90px 80px}
+  .apply-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+  .apply-info h2{font-family:'Outfit',sans-serif;font-size:clamp(28px,3.4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+  .apply-info p.lead{color:var(--muted);font-size:16px;line-height:1.75;margin-bottom:26px}
+  .step-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .step-list li{display:flex;gap:14px;align-items:flex-start;background:var(--card-bg);border:1px solid rgba(45,184,75,.1);border-radius:14px;padding:15px 17px}
+  .step-num{width:28px;height:28px;border-radius:50%;background:rgba(240,123,32,.15);border:1px solid rgba(240,123,32,.4);color:var(--orange);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .step-list h4{font-size:14.5px;font-weight:600;margin-bottom:2px}
+  .step-list p{font-size:13px;color:var(--muted);line-height:1.55}
+
+  .apply-form-wrap{background:var(--card-bg);border:1px solid rgba(45,184,75,.16);border-radius:24px;padding:34px 32px;box-shadow:0 28px 60px rgba(0,0,0,.5)}
+  .apply-form-wrap h3{font-family:'Outfit',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.6px;margin-bottom:6px}
+  .apply-form-wrap .sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+  .contact-form{display:flex;flex-direction:column;gap:13px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  .form-group{display:flex;flex-direction:column;gap:5px}
+  .form-group label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+  .form-group label .req{color:var(--orange)}
+  .form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,.04);border:1px solid rgba(45,184,75,.15);border-radius:10px;padding:12px 14px;color:var(--white);font-family:'Space Grotesk',sans-serif;font-size:14px;outline:none;transition:border-color .2s;resize:none;width:100%}
+  .form-group input::placeholder,.form-group textarea::placeholder{color:var(--muted)}
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green);background:rgba(45,184,75,.04)}
+  .form-group select option{background:var(--dark2)}
+  .btn-submit{background:var(--green);color:var(--black);border:none;padding:15px 32px;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .25s}
+  .btn-submit:hover{background:var(--green-light);transform:translateY(-2px);box-shadow:0 12px 30px rgba(45,184,75,.32)}
+  .btn-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+  .form-note{font-size:12.5px;color:var(--muted);line-height:1.6;text-align:center}
+  .form-note a{color:var(--green);text-decoration:none}
+  .form-msg{display:none;border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.6}
+  .form-msg.ok{display:block;background:rgba(45,184,75,.1);border:1px solid rgba(45,184,75,.4);color:#bbf7c8}
+  .form-msg.err{display:block;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.4);color:#fca5a5}
+  .honeypot{position:absolute!important;left:-9999px!important;opacity:0;height:0;overflow:hidden}
+
+  /* WHATSAPP CTA */
+  .wa-cta{background:var(--dark);border-top:1px solid rgba(45,184,75,.08);padding:80px 80px;text-align:center}
+  .wa-cta h2{font-family:'Outfit',sans-serif;font-size:clamp(26px,3.2vw,40px);font-weight:800;letter-spacing:-1.3px;margin-bottom:14px}
+  .wa-cta p{color:var(--muted);font-size:16px;line-height:1.7;max-width:560px;margin:0 auto 28px}
+  .wa-code{display:inline-block;background:rgba(45,184,75,.1);border:1px dashed rgba(45,184,75,.5);color:var(--green);font-weight:800;letter-spacing:.14em;padding:9px 20px;border-radius:10px;font-size:15px;margin-bottom:26px}
+  .wa-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* FOOTER */
+  footer{background:var(--black);border-top:1px solid rgba(45,184,75,.08);padding:38px 80px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .footer-copy{color:var(--muted);font-size:13px}
+  .footer-links{display:flex;gap:22px;flex-wrap:wrap}
+  .footer-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s}
+  .footer-links a:hover{color:var(--green)}
+
+  /* BACK TO TOP */
+  .back-to-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:var(--green);color:var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s;z-index:101;border:none;box-shadow:0 4px 14px rgba(45,184,75,.4)}
+  .back-to-top.active{opacity:1;visibility:visible}
+  .back-to-top:hover{background:var(--white);transform:translateY(-5px)}
+
+  /* STICKY MOBILE BAR */
+  .sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:99;display:none;background:rgba(10,14,11,.96);backdrop-filter:blur(16px);border-top:1px solid rgba(45,184,75,.2);padding:11px 16px;gap:10px;align-items:center;justify-content:space-between}
+  .sticky-bar .sp{font-family:'Outfit',sans-serif;font-weight:900;font-size:17px;color:var(--white)}
+  .sticky-bar .sp small{display:block;font-size:10px;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+  .sticky-bar a{background:var(--green);color:var(--black);text-decoration:none;font-weight:800;font-size:13.5px;padding:11px 20px;border-radius:100px;white-space:nowrap}
+
+  @media(max-width:980px){
+    .hero-inner,.apply-inner{grid-template-columns:1fr;gap:44px}
+    .facts-inner{grid-template-columns:repeat(2,1fr);gap:28px}
+  }
+  @media(max-width:900px){
+    nav{padding:14px 24px}
+    .nav-links{position:fixed;inset:0;background:var(--dark);flex-direction:column;align-items:center;justify-content:center;gap:36px;transform:translateX(100%);transition:transform .4s ease-in-out;z-index:100;padding-top:80px}
+    .nav-links.active{transform:translateX(0)}
+    .nav-links a{font-size:19px;color:var(--white)}
+    .nav-links .nav-cta{font-size:17px!important}
+    .mobile-nav-toggle{display:block}
+    .hero{padding:48px 24px 60px}
+    .problem,.learn,.facts,.apply,.wa-cta{padding-left:24px;padding-right:24px}
+    .problem,.learn,.apply{padding-top:64px;padding-bottom:64px}
+    .facts{padding-top:42px;padding-bottom:42px}
+    .section-divider{margin:0 24px}
+    .form-row{grid-template-columns:1fr}
+    .apply-form-wrap{padding:26px 20px}
+    footer{flex-direction:column;padding:28px 24px;text-align:center}
+    .footer-links{justify-content:center}
+    .sticky-bar{display:flex}
+    body{padding-bottom:70px}
+    .alert-strip{margin-top:69px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="40" height="40" viewBox="0 0 42 42" fill="none">
+      <rect x="4" y="12" width="26" height="18" rx="2" stroke="white" stroke-width="2.2" fill="none"/>
+      <line x1="17" y1="30" x2="17" y2="36" stroke="white" stroke-width="2.2"/>
+      <line x1="11" y1="36" x2="23" y2="36" stroke="white" stroke-width="2.2"/>
+      <circle cx="28" cy="10" r="2.5" fill="#2db84b"/>
+      <circle cx="36" cy="8" r="2.5" fill="#2db84b"/>
+      <circle cx="38" cy="18" r="2.5" fill="#2db84b"/>
+      <circle cx="34" cy="25" r="2.5" fill="#2db84b"/>
+      <path d="M17 20 Q22 16 28 10" stroke="#2db84b" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M17 20 Q26 14 36 8" stroke="#2db84b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M17 20 Q28 18 38 18" stroke="#2db84b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M17 20 Q26 22 34 25" stroke="#2db84b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="22" cy="20" r="3" fill="#f07b20"/>
+    </svg>
+    <span class="nav-logo-text">SSB <span>ICT</span></span>
+  </a>
+  <ul class="nav-links" id="nav-links-list">
+    <li><a href="index.html#courses">All Courses</a></li>
+    <li><a href="#learn">What You Learn</a></li>
+    <li><a href="#apply">Apply</a></li>
+    <li><a href="#apply" class="nav-cta">Claim ₦10,000 Spot</a></li>
+  </ul>
+  <button class="mobile-nav-toggle" aria-controls="nav-links-list" aria-expanded="false" aria-label="Toggle menu">
+    <span class="hamburger-icon"></span>
+  </button>
+</nav>
+
+<!-- ALERT -->
+<div class="alert-strip"><span>EARLY BIRD ENDS SOON — ₦10,000 NOW OR ₦15,000 LATER</span></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">2-Day Vibe Coding Training · 100% Online</div>
+      <h1>Learn to <span class="accent">Build With AI</span><br>in Just <span class="accent2">2 Days.</span></h1>
+      <p class="hero-sub">Still telling yourself, <strong>"I'll learn AI coding later"</strong>? Later is becoming more expensive. In 2 days you'll use AI to build real websites, web apps and a portfolio project — live, online, beginner friendly.</p>
+      <div class="hero-actions">
+        <a href="#apply" class="btn-primary">Apply for the Training →</a>
+        <a href="https://wa.me/2347034937176?text=VIBE%20CODING" class="btn-wa" target="_blank" rel="noopener">WhatsApp "VIBE CODING"</a>
+      </div>
+    </div>
+
+    <aside class="price-card">
+      <div class="price-label">Early Bird Price</div>
+      <div class="price-now">₦10,000</div>
+      <div class="price-was">Regular: <s>₦15,000</s></div>
+      <div class="price-save">You save ₦5,000 — limited slots</div>
+      <div class="price-divider"></div>
+      <ul class="price-facts">
+        <li>2-Day Intensive Training</li>
+        <li>100% Online — join from anywhere</li>
+        <li>Build a real portfolio project</li>
+        <li>Beginner friendly — no experience needed</li>
+      </ul>
+      <div class="price-warn">Once Early Bird closes, ₦15,000 applies. No more ₦10,000.</div>
+      <a href="#apply" class="btn-primary">Apply Now →</a>
+    </aside>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROBLEM / URGENCY -->
+<section class="problem">
+  <div class="problem-inner fade-in">
+    <span class="section-label">The Clock Is Ticking</span>
+    <h2>Still telling yourself, <span class="strike">"I'll learn AI coding later"</span>?</h2>
+    <p><strong>Later is becoming more expensive.</strong></p>
+    <p>Our 2-Day Vibe Coding Training is almost here, and the <strong>₦10,000 Early Bird Offer</strong> is closing soon. If you've been waiting for the right time, this is your moment.</p>
+  </div>
+</section>
+
+<!-- WHAT YOU LEARN -->
+<section class="learn" id="learn">
+  <div class="section-head fade-in">
+    <span class="section-label">What You'll Walk Away With</span>
+    <h2 class="section-title">In Just 2 Days, You'll<br>Learn to Use AI to:</h2>
+    <p class="section-desc">No theory overload. You build, you ship, you keep the project.</p>
+  </div>
+  <div class="learn-grid">
+    <div class="learn-card fade-in"><span class="ico"></span><h3>Build Websites</h3><p>Turn an idea into a live, responsive website using AI as your coding partner.</p></div>
+    <div class="learn-card fade-in"><span class="ico"></span><h3>Create Simple Web Apps</h3><p>Go beyond static pages — build working apps with real interactions.</p></div>
+    <div class="learn-card fade-in"><span class="ico"></span><h3>Write, Debug & Improve Code</h3><p>Use AI to write code faster, find bugs and refactor like a pro.</p></div>
+    <div class="learn-card fade-in"><span class="ico"></span><h3>Use GitHub</h3><p>Save, version and manage your projects the way real developers do.</p></div>
+    <div class="learn-card fade-in"><span class="ico"></span><h3>Deploy Your Projects</h3><p>Get your work online with a shareable link anyone can visit.</p></div>
+    <div class="learn-card fade-in"><span class="ico"></span><h3>Build a Real Portfolio Project</h3><p>Leave with something concrete to show clients, employers or friends.</p></div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section class="facts">
+  <div class="facts-inner fade-in">
+    <div class="fact"><div class="big">2</div><div class="small">Day Intensive</div></div>
+    <div class="fact"><div class="big orange">100%</div><div class="small">Online</div></div>
+    <div class="fact"><div class="big">₦10k</div><div class="small">Early Bird</div></div>
+    <div class="fact"><div class="big orange">0</div><div class="small">Experience Needed</div></div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply" id="apply">
+  <div class="apply-inner">
+    <div class="apply-info fade-in">
+      <span class="section-label">Apply for a Spot</span>
+      <h2>Lock In Your<br>₦10,000 Spot</h2>
+      <p class="lead">Fill the form and we'll confirm your slot and send payment details. Prefer chat? Send <strong style="color:var(--white)">VIBE CODING</strong> to us on WhatsApp.</p>
+      <ul class="step-list">
+        <li><span class="step-num">1</span><div><h4>Submit the application</h4><p>Takes under a minute — name, email and WhatsApp is all we need.</p></div></li>
+        <li><span class="step-num">2</span><div><h4>Get confirmation + payment details</h4><p>We reply on WhatsApp or email with your slot confirmation.</p></div></li>
+        <li><span class="step-num">3</span><div><h4>Join the 2-day live training</h4><p>Receive your class link and build alongside your instructor.</p></div></li>
+      </ul>
+    </div>
+
+    <div class="apply-form-wrap fade-in">
+      <h3>Training Application Form</h3>
+      <p class="sub">Early Bird: ₦10,000 · Regular: ₦15,000</p>
+
+      <form id="applyForm" class="contact-form" action="https://formsubmit.co/sholy.sam007@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Vibe Coding Training Application" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="Training" value="2-Day Vibe Coding Training (Early Bird ₦10,000)" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name <span class="req">*</span></label>
+            <input id="fname" name="Full Name" type="text" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Email <span class="req">*</span></label>
+            <input id="femail" name="Email" type="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>WhatsApp Number <span class="req">*</span></label>
+            <input id="fphone" name="WhatsApp Number" type="tel" placeholder="+234 ..." required>
+          </div>
+          <div class="form-group">
+            <label>Location</label>
+            <input id="fcity" name="Location" type="text" placeholder="City, Country">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Your Experience Level</label>
+          <select id="flevel" name="Experience Level">
+            <option>Complete beginner — never coded</option>
+            <option>Some basics — tried a tutorial or two</option>
+            <option>Already coding — want to go faster with AI</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Why do you want to join? (optional)</label>
+          <textarea id="fwhy" name="Why I want to join" rows="3" placeholder="What do you hope to build or achieve?"></textarea>
+        </div>
+
+        <div id="formMsg" class="form-msg" role="status" aria-live="polite"></div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Submit Application →</button>
+        <p class="form-note">Your application is sent to <strong>sholy.sam007@gmail.com</strong>. We reply within 24 hours.<br>Or WhatsApp <a href="https://wa.me/2347034937176?text=VIBE%20CODING" target="_blank" rel="noopener">07034937176</a> with "VIBE CODING".</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP CTA -->
+<section class="wa-cta">
+  <div class="fade-in">
+    <span class="section-label">Prefer WhatsApp?</span>
+    <h2>Send us one word.</h2>
+    <p>Send <strong style="color:var(--white)">VIBE CODING</strong> to <strong style="color:var(--white)">07034937176</strong> on WhatsApp now and we'll send you the payment details and class schedule.</p>
+    <div class="wa-code">VIBE CODING</div>
+    <div class="wa-actions">
+      <a href="https://wa.me/2347034937176?text=VIBE%20CODING" class="btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a href="#apply" class="btn-wa">Or fill the form above</a>
+    </div>
+    <p style="margin-top:34px;font-size:15px;color:var(--white);font-weight:600">Don't just use AI. Learn how to build with it.</p>
+  </div>
+</section>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-bar">
+  <div class="sp">₦10,000<small>Early bird ends soon</small></div>
+  <a href="#apply">Apply Now →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="display:flex;align-items:center;gap:12px">
+    <svg width="30" height="30" viewBox="0 0 42 42" fill="none">
+      <rect x="4" y="12" width="26" height="18" rx="2" stroke="white" stroke-width="2.2" fill="none"/>
+      <line x1="17" y1="30" x2="17" y2="36" stroke="white" stroke-width="2.2"/>
+      <line x1="11" y1="36" x2="23" y2="36" stroke="white" stroke-width="2.2"/>
+      <circle cx="28" cy="10" r="2.5" fill="#2db84b"/><circle cx="36" cy="8" r="2.5" fill="#2db84b"/>
+      <circle cx="38" cy="18" r="2.5" fill="#2db84b"/><circle cx="34" cy="25" r="2.5" fill="#2db84b"/>
+      <path d="M17 20 Q22 16 28 10" stroke="#2db84b" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M17 20 Q26 14 36 8" stroke="#2db84b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M17 20 Q28 18 38 18" stroke="#2db84b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M17 20 Q26 22 34 25" stroke="#2db84b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="22" cy="20" r="3" fill="#f07b20"/>
+    </svg>
+    <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:15px;color:var(--white)">SSB <span style="color:var(--green)">ICT</span> Solutions</span>
+  </div>
+  <p class="footer-copy">© 2026 SSB ICT Solutions · 2-Day Vibe Coding Training · Nigeria</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#courses">Courses</a>
+    <a href="#learn">What You Learn</a>
+    <a href="#apply">Apply</a>
+    <a href="https://wa.me/2347034937176?text=VIBE%20CODING" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${i * 0.06}s`;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Mobile nav
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('mobile-nav-open');
+    navLinks.classList.toggle('active');
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('mobile-nav-open');
+      navLinks.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Application form -> FormSubmit.co (sholy.sam007@gmail.com)
+  const applyForm = document.getElementById('applyForm');
+  const formMsg = document.getElementById('formMsg');
+  const submitBtn = document.getElementById('submitBtn');
+
+  applyForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+
+    if (!name || !email || !phone) {
+      formMsg.className = 'form-msg err';
+      formMsg.textContent = 'Please fill in your name, email and WhatsApp number.';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    formMsg.className = 'form-msg';
+    formMsg.textContent = '';
+
+    try {
+      const data = Object.fromEntries(new FormData(applyForm).entries());
+      const res = await fetch('https://formsubmit.co/ajax/sholy.sam007@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (!res.ok) throw new Error('Request failed');
+
+      applyForm.reset();
+      formMsg.className = 'form-msg ok';
+      formMsg.innerHTML = 'Application received! We will contact you within 24 hours with confirmation and payment details.<br>Need it faster? <a href="https://wa.me/2347034937176?text=VIBE%20CODING" target="_blank" rel="noopener">WhatsApp us "VIBE CODING" →</a>';
+    } catch (err) {
+      formMsg.className = 'form-msg err';
+      formMsg.innerHTML = 'Something went wrong. Please try again, or send <strong>VIBE CODING</strong> to <a href="https://wa.me/2347034937176?text=VIBE%20CODING" target="_blank" rel="noopener">07034937176</a> on WhatsApp.';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Application →';
+    }
+  });
+
+  // Back to top
+  const backToTopBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    backToTopBtn.classList.toggle('active', window.scrollY > 500);
+  });
+  backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+</body>
+</html>
